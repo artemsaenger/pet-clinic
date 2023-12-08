@@ -25,4 +25,4 @@ jobs:
         #### AUFGABE 3 COMPILE, DOCKER BUILD UND PUSH
           # hier ist Platz für maven package und docker build
           maven package
-          dockerbuild --tag artemsaenger/pet-clinic/pet-clinic:latest -f Dockerfile .
+          dockerbuild --tag artemsaenger/pet-clinic:latest -f Dockerfile .
