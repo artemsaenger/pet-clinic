@@ -26,3 +26,5 @@ jobs:
           # hier ist Platz für maven package und docker build
           mvn package
           docker build --tag artemsaenger/pet-clinic:latest -f Dockerfile .
+          echo ${{secrets.password}} | docker login -u 'artemsaenger' --password-stdin
+          docker push https://hub.docker.com/repository/docker/artemsaenger/pet-clinic:latest
