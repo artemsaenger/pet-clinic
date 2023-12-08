@@ -27,4 +27,4 @@ jobs:
           mvn package
           docker build --tag artemsaenger/pet-clinic:latest -f Dockerfile .
           echo ${{secrets.password}} | docker login -u 'artemsaenger' --password-stdin
-          docker push https://hub.docker.com/repository/docker/artemsaenger/pet-clinic:latest
+          docker push artemsaenger/pet-clinic:latest
